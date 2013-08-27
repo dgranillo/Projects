@@ -1,78 +1,51 @@
-"""
-Product Inventory Project - Create an application which manages
-an inventory of products. Create a product class which has a
-price, id, and quantity on hand. Then create an inventory class
-which keeps track of various products and can sum up the inventory
-value.
-"""
+#!/usr/bin/env python2.7
+""" Product Inventory Project
 
-class Product:
+Create an application which manages an inventory of products. Create a product
+class which has a price, id, and quantity on hand. Then create an inventory 
+class which keeps track of various products and can sum up the inventory value 
 
-    def __init__(self, price, pid, qty):
-        """
-        Class constructor that needs a price, a product id,
-        and quantity.
-        """
+By: Dan Granillo """
+
+class Product(object):
+    num_products = 0
+    def __init__(self, name, qty, price):
         self.price = price
-        self.pid = pid
+        self.name = name
         self.qty = qty
+        self.pid = Product.num_products + 1
+        Product.num_products += 1
 
-    def update_qty(self, qty, method='add'):
-        """
-        Updates the quantity of produts. By default, adds the
-        passed quantity. Pass method as 'subtract' to subtract
-        the quantity.
-        """
-        if method == 'add':
-            self.qty += qty
-        elif method == 'subtract':
-            self.qty = max(0, self.qty - qty)
-
+    def update_qty(self, qty):
+        self.qty += qty
+    
     def print_product(self):
-        """
-        Prints a single product.
-        """
-        print '%d\t%s\t%.02f each' % (self.pid, self.qty, self.price)
+        print "We have %s %s at $%s" %(self.qty, self.name, self.price)
 
-class Inventory:
-
+class Inventory(object):
     def __init__(self):
-        """
-        Initializes the class instance.
-        """
-        self.products = [] # list to hold all products
-
+        self.products = []
+    
     def add(self, product):
-        """
-        Adds a passed Product to the list of products.
-        """
         self.products.append(product)
-
+        print "%s %s added to inventory with PID:%s" %(product.qty,
+                product.name, product.pid)
+    
     def print_inventory(self):
-        """
-        Prints the current inventory, and the total value
-        of products.
-        """
         value = 0
-        for product in self.products:
-            print '%d\t%s\t%.02f each' % (product.pid, product.qty, product.price)
-            value += (product.price * product.qty)
-        print '\nTotal value: %.02f' % value
+        for item in self.products:
+            value += item.price * item.qty
+            print "Inventory value = $%.02f" %(value)
 
 if __name__ == '__main__':
-    p1 = Product(1.4, 123, 5)
-    p2 = Product(1, 3432, 100)
-    p3 = Product(100.4, 2342, 99)
-
+    bananas = Product("banana", 5, 10.00)
+    apples = Product("apple", 25, 3.00)
+    cherries = Product("cherry", 100, 4.00)
 
     i = Inventory()
-    i.add(p1)
-    i.add(p2)
-    i.add(p3)
-    i.print_inventory()
 
-    p1.update_qty(10)
-    i.print_inventory()
+    i.add(bananas)
+    i.add(apples)
+    i.add(cherries)
     
-    p1.update_qty(10, method='subtract')
     i.print_inventory()
