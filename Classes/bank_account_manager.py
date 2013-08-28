@@ -2,7 +2,9 @@
 """Bank Account Manager
 Create a class called Account which will be an abstract class for three other
 classes called: CheckingAccount, SavingsAccount, and BusinessAccount. Manage
-credits and debits from these accounts throough an ATM style program"""
+credits and debits from these accounts throough an ATM style program
+
+Author: Dan Granillo"""
 
 """TO DO
 Clean up the million if statements. Then add functions to different account
