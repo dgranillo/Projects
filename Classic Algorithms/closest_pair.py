@@ -1,5 +1,4 @@
 #!/usr/bin/env python2.7
-
 """Closest Pair Problem
 The closest pair of points problem or closest pair problem is a problem of
 computational geometry. Given 'n' points in metric space, find a pair of points
