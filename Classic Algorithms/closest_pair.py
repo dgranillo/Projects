@@ -1,10 +1,12 @@
 #!/usr/bin/env python2.7
-"""Closest Pair Problem
-The closest pair of points problem or closest pair problem is a problem of
-computational geometry. Given 'n' points in metric space, find a pair of points
-with the smallest distance between them
+"""
+ Closest Pair Problem - The closest pair of points problem or closest pair
+ problem is a problem of computational geometry. Given 'n' points in metric
+ space, find a pair of points with the smallest distance between them
 
-Author: Dan Granillo"""
+Author: Dan Granillo <dan.granillo@gmail.com>
+
+"""
 
 import random
 import math

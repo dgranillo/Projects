@@ -1,11 +1,12 @@
 #!/usr/bin/env python2.7
+"""
+ Collatz Conjecture - Start with a number n > 1. Find the number of steps it
+ takes to reach 1 using the following process. If 'n' is even, divide by 2. If 
+ 'n' is odd, multiply by 3 and add 1.
 
-"""Collatz Conjecture
-Start with a number n > 1. Find the number of steps it takes to reach 1 using
-the following process. If 'n' is even, divide by 2. If 'n' is odd, multiply by 3
-and add 1.
+Author: Dan Granillo <dan.granillo@gmail.com>
 
-Author: Dan Granillo"""
+"""
 
 class CollatzNumber(object):
     steps = 0

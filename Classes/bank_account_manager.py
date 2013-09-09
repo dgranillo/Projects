@@ -1,16 +1,17 @@
 #!/usr/bin/env python2.7
-"""Bank Account Manager
-Create a class called Account which will be an abstract class for three other
-classes called: CheckingAccount, SavingsAccount, and BusinessAccount. Manage
-credits and debits from these accounts throough an ATM style program
+"""
+ Bank Account Manager - Create a class called Account which will be an abstract
+ class for three other classes called: CheckingAccount, SavingsAccount, and
+ BusinessAccount. Manage credits and debits from these accounts throough an ATM
+ style program
 
-Author: Dan Granillo"""
-
-"""TO DO
-Clean up the million if statements. Then add functions to different account
-types. 
-
-e.g. Interest on savings account's balance determined over time"""
+ Author: Dan Granillo <dan.granillo@gmail.com>
+ 
+ TO DO - Clean up the million if statements. Then add functions to different
+ account types.
+ e.g. Interest on savings account's balance determined over time
+ 
+"""
 
 class Account(object):
     num_accounts = 000000000000

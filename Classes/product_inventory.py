@@ -1,11 +1,13 @@
 #!/usr/bin/env python2.7
-""" Product Inventory Project
+"""
+ Product Inventory Project - Create an application which manages an inventory of
+ products. Create a product class which has a price, id, and quantity on hand.
+ Then create an inventory class which keeps track of various products and can
+ sum up the inventory value.
+ 
+ Author: Dan Granillo <dan.granillo@gmail.com>
 
-Create an application which manages an inventory of products. Create a product
-class which has a price, id, and quantity on hand. Then create an inventory 
-class which keeps track of various products and can sum up the inventory value 
-
-Author: Dan Granillo """
+"""
 
 class Product(object):
     num_products = 0
